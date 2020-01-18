@@ -1,0 +1,5 @@
+name: Person
+description: Input person information
+core: 8.x
+package: Form
+type: module
