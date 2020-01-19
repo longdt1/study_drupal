@@ -52,11 +52,11 @@ class PersonInfo extends FormBase {
  * {@inheritdoc}
  */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->messanger()->addMessage('Here is the information you provided:');
-    $this->messanger()->addMessage('Name: ' . $form_state->getValue('person_name'));
-    $this->messanger()->addMessage('Name: ' . $form_state->getValue('person_name'));
-    $this->messanger()->addMessage('Age: ' . $form_state->getValue('person_age'));
-    $this->messanger()->addMessage('Gender: ' . $form_state->getValue('person_gender'));
-    $this->messanger()->addMessage('Date of Birth: ' . date("d-m-Y", strtotime($form_state->getValue('person_dob'))));
+    $this->messenger()->addMessage('Here is the information you provided:');
+    $this->messenger()->addMessage('Name: ' . $form_state->getValue('person_name'));
+    $this->messenger()->addMessage('Name: ' . $form_state->getValue('person_name'));
+    $this->messenger()->addMessage('Age: ' . $form_state->getValue('person_age'));
+    $this->messenger()->addMessage('Gender: ' . $form_state->getValue('person_gender'));
+    $this->messenger()->addMessage('Date of Birth: ' . date("d-m-Y", strtotime($form_state->getValue('person_dob'))));
   }
 }
