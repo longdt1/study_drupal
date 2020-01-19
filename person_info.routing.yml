@@ -1,7 +1,7 @@
-people.form:
- path: '/people/form'
- defaults:
-   _title: 'People Details form'
-   _form: '\Drupal\people_form\Form\PeopleForm'
- requirements:
-   _permission: 'access content'
+person.info:
+  path: '/person-info'
+  defaults:
+    _title: 'Person Details form'
+    _form: '\Drupal\person_info\Form\PersonInfo'
+  requirements:
+    _permission: 'access content'
