@@ -1,21 +1,26 @@
 <?php
+
 namespace Drupal\person_info\Form;
+
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Messenger\Messenger;
-/**
- * Implements form.
- */
+
+  /**
+  * Implements form.
+  */
 class PersonInfo extends FormBase {
-/**
- * {@inheritdoc}
- */
+  /**
+  * {@inheritdoc}
+  */
+  
   public function getFormId() {
     return 'person_info';
   }
-/**
- * {@inheritdoc}
- */
+  
+  /**
+  * {@inheritdoc}
+  */
+  
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form['person_name'] = [
       '#type' => 'textfield',
@@ -48,9 +53,11 @@ class PersonInfo extends FormBase {
     ];
     return $form;
   }
-/**
- * {@inheritdoc}
- */
+
+  /**
+  * {@inheritdoc}
+  */
+
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->messenger()->addMessage('Here is the information you provided:');
     $this->messenger()->addMessage('Name: ' . $form_state->getValue('person_name'));
@@ -59,4 +66,5 @@ class PersonInfo extends FormBase {
     $this->messenger()->addMessage('Gender: ' . $form_state->getValue('person_gender'));
     $this->messenger()->addMessage('Date of Birth: ' . date("d-m-Y", strtotime($form_state->getValue('person_dob'))));
   }
+
 }
